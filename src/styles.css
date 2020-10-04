@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
 
-.weather-app {
+.App {
   border: solid 1px #18b1a7;
   border-radius: 10px;
   margin: 20px auto;

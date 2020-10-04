@@ -1,25 +1,35 @@
 import React, { useState } from "react";
-import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWind } from "@fortawesome/free-solid-svg-icons";
+import { faTint } from "@fortawesome/free-solid-svg-icons";
 
-export default function Weather(props) {
-  const [temperature, setTemperature] = useState(null);
-
-  function showTemperature(response) {
-    setTemperature(response.data.main.temp);
-  }
-
-  if (temperature) {
-    return (
-      <h3>
-        The temperature in {props.city} is {Math.round(temperature)}°C
-      </h3>
-    );
-  } else {
-    let apiKey = `0503e41c953380663dd93b4d5f81edfb`;
-    let units = `metric`;
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=${units}`;
-    axios.get(url).then(showTemperature);
-
-    return <p>Loading temperature for {props.city}...</p>;
-  }
+export default function Weather() {
+  return (
+    <div className="Weather">
+      <h1>Amsterdam</h1>
+      <ul>
+        <li>Sunday 14:00</li>
+        <li>Cloudy</li>
+      </ul>
+      <div className="row">
+        <div className="col-6">
+          <img
+            src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
+            alt="Cloudy"
+          />
+          13°C
+        </div>
+        <div className="col-6">
+          <ul>
+            <li>
+              <FontAwesomeIcon icon={faWind} className="fas" /> 37km/h
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faTint} className="fas" /> 74%
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
 }
