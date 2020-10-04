@@ -17,15 +17,17 @@ export default function Weather() {
             src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
             alt="Cloudy"
           />
-          13°C
+          <span className="temperature">13°C</span>
         </div>
         <div className="col-6">
           <ul>
             <li>
-              <FontAwesomeIcon icon={faWind} className="fas" /> Wind = 37km/h
+              <FontAwesomeIcon icon={faWind} className="fasWind" /> Wind =
+              37km/h
             </li>
             <li>
-              <FontAwesomeIcon icon={faTint} className="fas" /> Humidity = 74%
+              <FontAwesomeIcon icon={faTint} className="fasHumidity" /> Humidity
+              = 74%
             </li>
           </ul>
         </div>
