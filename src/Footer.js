@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <small className="coded">
+    <small className="footer">
       <a
         href="https://github.com/zanibao/my-weather-react"
         target="_blank"
