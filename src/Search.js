@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkedAlt } from "@fortawesome/free-solid-svg-icons";
