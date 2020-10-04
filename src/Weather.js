@@ -22,10 +22,10 @@ export default function Weather() {
         <div className="col-6">
           <ul>
             <li>
-              <FontAwesomeIcon icon={faWind} className="fas" /> 37km/h
+              <FontAwesomeIcon icon={faWind} className="fas" /> Wind = 37km/h
             </li>
             <li>
-              <FontAwesomeIcon icon={faTint} className="fas" /> 74%
+              <FontAwesomeIcon icon={faTint} className="fas" /> Humidity = 74%
             </li>
           </ul>
         </div>
