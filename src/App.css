@@ -1,0 +1,12 @@
+.App {
+  border: solid 1px #18b1a7;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 15px;
+  max-width: 450px;
+  position: relative;
+}
+
+.container {
+  font-family: "Noto Sans JP", sans-serif;
+}

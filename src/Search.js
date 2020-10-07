@@ -18,7 +18,9 @@ export default function Search() {
           />
         </div>
         <div className="col-1">
-          <input type="submit" value="Search" className="search-button" />
+          <button className="search-button" type="submit" value="Search">
+            Search
+          </button>
         </div>
 
         <div className="col-1">
