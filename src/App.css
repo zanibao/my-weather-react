@@ -5,10 +5,10 @@
   padding: 15px;
   max-width: 500px;
   position: relative;
-  background-color: #18b1a7;
-  background: linear-gradient(rgba(67, 203, 221, 0.5), transparent);
+  background-image: url("./backgroundApp.jpeg");
 }
 
 .container {
   font-family: "Noto Sans JP", sans-serif;
+  color: white;
 }

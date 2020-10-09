@@ -4,8 +4,10 @@ import axios from "axios";
 import "./Weather.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCloudShowersHeavy, faWind } from "@fortawesome/free-solid-svg-icons";
+import { faWind } from "@fortawesome/free-solid-svg-icons";
 import { faTint } from "@fortawesome/free-solid-svg-icons";
+import { faTemperatureHigh } from "@fortawesome/free-solid-svg-icons";
+import { faTemperatureLow } from "@fortawesome/free-solid-svg-icons";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -33,15 +35,13 @@ export default function Weather(props) {
         <div className="row">
           <div className="col-4">
             <h1>{weatherData.city}</h1>
-            <p span className="lighter">
-              {weatherData.date}
-            </p>
+            <p>{weatherData.date}</p>
           </div>
           <div className="col-4">
             <span className="temperature">{weatherData.temperature}</span>
-            <span className="units">°C</span>
+            <span className="units">°C | °F</span>
           </div>
-          <div className="col-3">
+          <div className="col-4">
             <img src={weatherData.icon} alt={weatherData.description} />
             <p className="text-capitalize">{weatherData.description}</p>
           </div>
@@ -62,7 +62,16 @@ export default function Weather(props) {
           </div>
           <div className="col-4">
             <p className="highlow">
-              H: {weatherData.tempmax}° / L: {weatherData.tempmin}°
+              <FontAwesomeIcon
+                icon={faTemperatureHigh}
+                className="fasTemperatureHigh"
+              />{" "}
+              H: {weatherData.tempmax}° /{" "}
+              <FontAwesomeIcon
+                icon={faTemperatureLow}
+                className="fasTemperatureLow"
+              />{" "}
+              L: {weatherData.tempmin}°
             </p>
           </div>
         </div>
