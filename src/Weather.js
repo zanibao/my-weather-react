@@ -7,31 +7,41 @@ import { faTint } from "@fortawesome/free-solid-svg-icons";
 export default function Weather() {
   return (
     <div className="Weather">
-      <h1>Amsterdam</h1>
-      <ul span className="lighter">
-        <li>Sunday 14:00</li>
-        <li>Cloudy</li>
-      </ul>
       <div className="row">
-        <div className="col-6">
+        <div className="col-4">
+          <h1>Amsterdam</h1>
+          <p span className="lighter">
+            Sunday 14:00
+          </p>
+        </div>
+        <div className="col-4">
+          <span className="temperature">13</span>
+          <span className="units">°C</span>
+        </div>
+        <div className="col-3">
           <img
             src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
             alt="Cloudy"
           />
-          <span className="temperature">13</span>
-          <span className="units">°C</span>
+          <p span className="description">
+            Cloudy
+          </p>
         </div>
-        <div className="col-6">
-          <ul className="lighter">
-            <li>
-              <FontAwesomeIcon icon={faWind} className="fasWind" /> Wind =
-              37km/h
-            </li>
-            <li>
-              <FontAwesomeIcon icon={faTint} className="fasHumidity" /> Humidity
-              = 74%
-            </li>
-          </ul>
+      </div>
+      <div className="row">
+        <div className="col-4">
+          <p className="wind">
+            <FontAwesomeIcon icon={faWind} className="fasWind" /> Wind = 37km/h
+          </p>
+        </div>
+        <div className="col-4">
+          <p className="humidity">
+            <FontAwesomeIcon icon={faTint} className="fasHumidity" /> Humidity =
+            74%
+          </p>
+        </div>
+        <div className="col-4">
+          <p className="highlow">H: 15° / L: 10°</p>
         </div>
       </div>
     </div>

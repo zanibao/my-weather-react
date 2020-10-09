@@ -3,8 +3,10 @@
   border-radius: 10px;
   margin: 20px auto;
   padding: 15px;
-  max-width: 450px;
+  max-width: 500px;
   position: relative;
+  background-color: #18b1a7;
+  background: linear-gradient(rgba(67, 203, 221, 0.5), transparent);
 }
 
 .container {
