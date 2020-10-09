@@ -61,10 +61,10 @@ img {
   width: 52px;
 }
 
-.Weather .description {
+.Weather .text-capitalize {
   color: rgb(110, 108, 108);
   position: relative;
-  margin-top: -14px;
+  margin-top: -10px;
 }
 
 .Weather .temperature {
