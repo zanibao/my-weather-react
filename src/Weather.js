@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+import FormattedDate from "./FormattedDate";
 import "./Weather.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,12 +14,10 @@ export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
-    console.log(response.data);
-
     setWeatherData({
       ready: true,
       city: response.data.name,
-      date: "Sunday 14:00",
+      date: new Date(response.data.dt * 1000),
       temperature: Math.round(response.data.main.temp),
       icon: "https://ssl.gstatic.com/onebox/weather/64/cloudy.png",
       description: response.data.weather[0].description,
@@ -35,7 +34,8 @@ export default function Weather(props) {
         <div className="row">
           <div className="col-4">
             <h1>{weatherData.city}</h1>
-            <p>{weatherData.date}</p>
+
+            <FormattedDate date={weatherData.date} />
           </div>
           <div className="col-4">
             <span className="temperature">{weatherData.temperature}</span>

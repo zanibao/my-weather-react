@@ -1,4 +1,5 @@
 import React from "react";
+import "./Search.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkedAlt } from "@fortawesome/free-solid-svg-icons";
@@ -12,8 +13,8 @@ export default function Search() {
             type="search"
             placeholder="Enter a city..."
             className="form-control"
-            autofocus="on"
-            autocomplete="off"
+            autoFocus="on"
+            autoComplete="off"
             id="city-input"
           />
         </div>
