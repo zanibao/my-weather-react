@@ -23,7 +23,17 @@ h1 {
   position: relative;
   top: -34px;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
+}
+
+a {
+  color: #18b1a7;
+}
+
+a:hover {
+  color: #66ebe2;
+  transform: all 200ms ease;
+  opacity: 0.9;
 }
 
 canvas {
