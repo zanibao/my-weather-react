@@ -9,13 +9,14 @@ h1 {
   line-height: 38px;
   margin: 0;
   font-weight: 600;
+  padding-bottom: 5px;
 }
 
 .temperature {
   font-size: 64px;
   font-weight: 400;
   line-height: 64px;
-  margin: 16px;
+  padding-left: 10px;
 }
 
 .units {
@@ -23,13 +24,12 @@ h1 {
   top: -34px;
   font-size: 16px;
   font-weight: 400;
-  margin-left: -16px;
 }
 
-img {
-  width: 52px;
+canvas {
   margin: 0 auto;
   display: block;
+  padding: 4px 0px;
 }
 
 .text-capitalize {
@@ -42,14 +42,12 @@ img {
 .wind,
 .humidity,
 .highlow {
-  padding-top: 10px;
+  margin: 0 auto;
+  display: block;
+  padding-top: 20px;
   padding-bottom: 200px;
   font-size: 14px;
-}
-
-.humidity,
-.highlow {
-  margin-left: -10px;
+  font-weight: 400;
 }
 
 .fasWind {

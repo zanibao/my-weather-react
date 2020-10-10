@@ -2,6 +2,8 @@ import React from "react";
 
 import FormattedDate from "./FormattedDate";
 
+import WeatherIcon from "./WeatherIcon";
+
 import "./WeatherInfo.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -16,7 +18,6 @@ export default function WeatherInfo(props) {
       <div className="row">
         <div className="col-4">
           <h1>{props.data.city}</h1>
-
           <FormattedDate date={props.data.date} />
         </div>
         <div className="col-4">
@@ -24,7 +25,7 @@ export default function WeatherInfo(props) {
           <span className="units">°C | °F</span>
         </div>
         <div className="col-4">
-          <img src={props.data.icon} alt={props.data.description} />
+          <WeatherIcon code={props.data.icon} />
           <p className="text-capitalize">{props.data.description}</p>
         </div>
       </div>
@@ -48,7 +49,7 @@ export default function WeatherInfo(props) {
               icon={faTemperatureHigh}
               className="fasTemperatureHigh"
             />{" "}
-            H: {props.data.tempmax}° /{" "}
+            H: {props.data.tempmax}° |{" "}
             <FontAwesomeIcon
               icon={faTemperatureLow}
               className="fasTemperatureLow"
