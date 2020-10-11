@@ -6,6 +6,7 @@ import WeatherForecast from "./WeatherForecast";
 import "./Weather.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkedAlt } from "@fortawesome/free-solid-svg-icons";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -59,7 +60,7 @@ export default function Weather(props) {
         <div className="Weather">
           <form className="row" onSubmit={handleSubmit}>
             <div className="form-row">
-              <div className="col-8">
+              <div className="col-large">
                 <input
                   type="search"
                   placeholder="Enter a city..."
@@ -70,13 +71,14 @@ export default function Weather(props) {
                   onChange={handleCityChange}
                 />
               </div>
-              <div className="col-1">
+
+              <div className="col">
                 <button className="search-button" type="submit" value="Search">
-                  Search
+                  <FontAwesomeIcon icon={faSearch} className="fas" />
                 </button>
               </div>
 
-              <div className="col-1">
+              <div className="col">
                 <button
                   className="current-button"
                   type="submit"

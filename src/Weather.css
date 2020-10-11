@@ -1,5 +1,5 @@
 .form-row {
-  padding: 10px 60px 10px 12px;
+  padding: 10px 12px;
 }
 
 .row {
@@ -7,8 +7,14 @@
   position: relative;
 }
 
+.col-large {
+  width: 400px;
+}
+
 .search-button {
-  margin-left: 5px;
+  margin-top: -2px;
+  margin-right: 0px;
+  margin-left: 0px;
   padding: 10px 20px;
   background-color: #18b1a7;
   border-radius: 100px;
@@ -19,10 +25,13 @@
 .search-button:hover {
   transform: all 200ms ease;
   opacity: 0.9;
+  cursor: pointer;
 }
 
 .current-button {
-  margin-left: 70px;
+  margin-top: -2px;
+  margin-left: 0px;
+  margin-right: 0px;
   padding: 10px 20px;
   background-color: #528cc2;
   border-radius: 100px;
@@ -33,33 +42,5 @@
 .current-button:hover {
   transform: all 200ms ease;
   opacity: 0.9;
-}
-
-.weather-temperature .active {
-  color: black;
-  cursor: default;
-}
-
-.weather-temperature .active:hover {
-  text-decoration: none;
-}
-
-.weather-forecast h3 {
-  color: rgb(165, 167, 167);
-  font-size: 14px;
-  font-weight: 400;
-  text-align: center;
-  height: 15px;
-  line-height: 15px;
-  padding-top: 20px;
-}
-
-.weather-forecast-temperature {
-  text-align: center;
-  color: rgb(124, 122, 122);
-  font-size: 13px;
-  font-weight: 400;
-  height: auto;
-  line-height: 15px;
-  white-space: nowrap;
+  cursor: pointer;
 }

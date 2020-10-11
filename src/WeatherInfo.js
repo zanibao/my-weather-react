@@ -18,10 +18,10 @@ export default function WeatherInfo(props) {
           <h1>{props.data.city}</h1>
           <FormattedDate date={props.data.date} />
         </div>
-        <div className="col-4">
+        <div className="col">
           <WeatherTemperature celsius={props.data.temperature} />
         </div>
-        <div className="col-4">
+        <div className="col-3">
           <WeatherIcon code={props.data.icon} />
           <p className="text-capitalize">{props.data.description}</p>
         </div>
