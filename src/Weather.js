@@ -8,6 +8,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkedAlt } from "@fortawesome/free-solid-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
+import Loader from 'react-loader-spinner';
+
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
@@ -97,6 +99,14 @@ export default function Weather(props) {
     );
   } else {
     search();
-    return "Loading...";
+    return (
+      <Loader
+         type="ThreeDots"
+         color="#18b1a7"
+         height={100}
+         width={100}
+         timeout={3000} 
+         />
+    );
   }
 }
